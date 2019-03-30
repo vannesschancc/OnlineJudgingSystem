@@ -2,14 +2,12 @@
 
 
 from project import create_app
-app = create_app()
-
 import os
 import unittest
 from flask import current_app
 from flask_testing import TestCase
 
-
+app = create_app()
 class TestDevelopmentConfig(TestCase):
     def create_app(self):
         app.config.from_object('project.config.DevelopmentConfig')

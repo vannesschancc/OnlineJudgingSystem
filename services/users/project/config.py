@@ -1,6 +1,7 @@
 # services/users/project/config.py
 import os  # new
 
+
 class BaseConfig:
     """Base configuration"""
     TESTING = False
@@ -19,7 +20,7 @@ class TestingConfig(BaseConfig):
     """Testing configuration"""
     TESTING = True
     SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_TEST_URL')  # new
-    #SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL')
+    
 
 class ProductionConfig(BaseConfig):
     """Production configuration"""
